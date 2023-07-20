@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class ClearButtonBehaviour : MonoBehaviour
 {
-    public GameObject highlightsparent;
+    public TrainingStepManager trainingStepManager;
 
     public void ClearHighlights()
     {
-        if(highlightsparent.transform.childCount > 1)
+        if (trainingStepManager.steps[trainingStepManager.curStep_Create].
+            hitMarkerParent.transform.childCount > 0)
         {
-            foreach (Transform highlight in highlightsparent.transform)
+            foreach (Transform marker in trainingStepManager.steps[trainingStepManager.curStep_Create].
+                hitMarkerParent.transform)
             {
-                if(highlight.tag == "hint")
+                if(marker.tag == "hint")
                 { 
-                    Destroy(highlight.gameObject);
+                    Destroy(marker.gameObject);
                 }
             }
 

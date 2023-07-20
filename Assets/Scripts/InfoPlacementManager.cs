@@ -9,6 +9,7 @@ public class InfoPlacementManager : MonoBehaviour
 
     public GameObject hitMarker;
     public GameObject debugTextGO;
+    public TrainingStepManager stepManager; 
 
     private TMP_Text debugText;
     // Start is called before the first frame update
@@ -29,9 +30,8 @@ public class InfoPlacementManager : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit))
             {
-                Vector3 localHit = transform.InverseTransformPoint(hit.point);
-                Debug.Log(localHit);
-                Instantiate(hitMarker, hit.point, this.transform.rotation,this.transform);
+                Instantiate(hitMarker, hit.point, this.transform.rotation,
+                    stepManager.steps[stepManager.curStep_Create].hitMarkerParent.transform);
                 debugText.text = ("hit");
             }
             else
@@ -49,7 +49,8 @@ public class InfoPlacementManager : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                Instantiate(hitMarker, hit.point, this.transform.rotation, this.transform);
+                Instantiate(hitMarker, hit.point, this.transform.rotation,
+                    stepManager.trainingSteps[stepManager.currentStep].hitMarkerParent.transform);
                 debugText.text = ("hit");
             }
             else

@@ -24,11 +24,11 @@ public class Step : MonoBehaviour
 
     public void enableStep()
     {
-
+        hitMarkerParent.SetActive(true);
     }
 
     public void disableStep()
     {
-
+        hitMarkerParent.SetActive(false);
     }
 }
