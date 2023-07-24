@@ -6,7 +6,6 @@ public class Step : MonoBehaviour
 {
     public string description;
     public GameObject hitMarkerParent;
-    //public GameObject [] hitMarkers;
 
     public int stepID;
 

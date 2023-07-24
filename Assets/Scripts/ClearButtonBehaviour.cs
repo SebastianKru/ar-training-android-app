@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ClearButtonBehaviour : MonoBehaviour
 {
-    public TrainingStepManager trainingStepManager;
+    public AuthorModeStepManager trainingStepManager;
 
     public void ClearHighlights()
     {
-        if (trainingStepManager.steps[trainingStepManager.curStep_Create].
+        if (trainingStepManager.steps[trainingStepManager.curStep].
             hitMarkerParent.transform.childCount > 0)
         {
-            foreach (Transform marker in trainingStepManager.steps[trainingStepManager.curStep_Create].
+            foreach (Transform marker in trainingStepManager.steps[trainingStepManager.curStep].
                 hitMarkerParent.transform)
             {
                 if(marker.tag == "hint")

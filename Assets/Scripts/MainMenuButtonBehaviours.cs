@@ -21,12 +21,6 @@ public class MainMenuButtonBehaviours : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void CreateTrainingClicked()
     {
         mainMenuUI.SetActive(false);
