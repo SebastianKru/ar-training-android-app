@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// controls the main menu and the effect of its buttons
 public class MainMenuButtonBehaviours : MonoBehaviour
 {
     public GameObject mainMenuUI;
     public GameObject createTrainingUI;
-    public GameObject playTrainingUI; 
+    public GameObject playTrainingUI;
+
     // Start is called before the first frame update
     void Start()
     {

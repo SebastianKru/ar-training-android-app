@@ -546,8 +546,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1327702395}
-        m_TargetAssemblyTypeName: TrainingStepManager, Assembly-CSharp
+      - m_Target: {fileID: 597663532}
+        m_TargetAssemblyTypeName: PlayModeStepManager, Assembly-CSharp
         m_MethodName: OnPlayTrainingButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -3279,13 +3279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4be92bdbb6e4a4a9476de3c16ee55a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  errorMessageNoMarkers: {fileID: 1342850744}
+  errorMessageIfNoMarkers: {fileID: 1342850744}
   stepPrefab: {fileID: 989371784849421944, guid: 33e2fa0f40def4aa8b6d5a0e4a6bb4a3, type: 3}
   stepParent: {fileID: 628005851}
   inputField: {fileID: 1577461917}
   backButton: {fileID: 1182455667}
   forwardButton: {fileID: 439125892}
-  headingCreateTraining: {fileID: 1986876603}
+  heading: {fileID: 1986876603}
   steps: []
   curStep: 0
 --- !u!4 &1327702396
@@ -4986,7 +4986,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitMarker: {fileID: 2959944408939045735, guid: 2d194864a4a554066a23a40d318b7901, type: 3}
-  debugTextGO: {fileID: 69021911}
   stepManager: {fileID: 1327702395}
 --- !u!114 &1985732353
 MonoBehaviour:
@@ -5240,7 +5239,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1327702395}
         m_TargetAssemblyTypeName: TrainingStepManager, Assembly-CSharp
-        m_MethodName: OnMenuButtonPressedFromCreate
+        m_MethodName: OnMenuButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
