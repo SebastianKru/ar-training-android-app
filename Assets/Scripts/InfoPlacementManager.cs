@@ -48,13 +48,7 @@ public class InfoPlacementManager : MonoBehaviour
                 Instantiate(hitMarker, hit.point, this.transform.rotation,
                     stepManager.steps[stepManager.curStep].hitMarkerParent.transform);
             }
-            else
-            {
-            }
-
         }
-
 #endif
-
     }
 }
